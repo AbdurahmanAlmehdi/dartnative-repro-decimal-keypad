@@ -1,5 +1,7 @@
 # Repro: no decimal keypad for TextField (`TextInputType.numberWithOptions` / `decimal` missing)
 
+Issue: https://github.com/DartNative/dartnative/issues/58
+
 `TextInputType` in DartNative 1.0.0 is an enum with no `numberWithOptions(decimal:, signed:)` and no `decimal` value. The closest, `TextInputType.number`, opens the iPhone's digits-only number pad, which has no decimal separator key. Any amount field (prices, payments, distances) can't take a value like `12.5` on an iPhone without a hardware keyboard.
 
 ## Run
